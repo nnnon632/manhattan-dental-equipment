@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Manhattan Dental Equipment — Service, Installation & Sales</title>
+<meta name="description" content="Manhattan's dental practices deserve a technician who shows up, fixes it on the first visit, and doesn't overcharge. Family-owned since 1985." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #0a0a0a;
+    --ink-soft: #2a2a2a;
+    --ink-mute: #6a6a6a;
+    --ink-faint: #a8a8a8;
+    --paper: #ffffff;
+    --paper-warm: #fafaf8;
+    --rule: #e8e6e1;
+    --accent: #0f4c5c;
+    --accent-soft: #e6eef0;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Layout */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+  .container-narrow { max-width: 820px; margin: 0 auto; padding: 0 32px; }
+
+  /* Header */
+  header {
+    border-bottom: 1px solid var(--rule);
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: saturate(1.4) blur(8px);
+    -webkit-backdrop-filter: saturate(1.4) blur(8px);
+    z-index: 100;
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  .logo {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    text-decoration: none;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .logo-mark {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    transform: translateY(-1px);
+  }
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 36px;
+    align-items: center;
+  }
+  nav a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    transition: color 0.2s ease;
+  }
+  nav a:hover { color: var(--accent); }
+  .nav-cta {
+    background: var(--ink);
+    color: var(--paper) !important;
+    padding: 10px 18px;
+    border-radius: 2px;
+    font-weight: 500;
+  }
+  .nav-cta:hover { background: var(--accent); color: var(--paper) !important; }
+
+  /* Hero */
+  .hero { padding: 100px 0 120px; border-bottom: 1px solid var(--rule); }
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(44px, 6vw, 76px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    max-width: 900px;
+    margin-bottom: 32px;
+  }
+  h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .hero-sub {
+    font-size: 19px;
+    color: var(--ink-soft);
+    max-width: 580px;
+    line-height: 1.55;
+    margin-bottom: 48px;
+  }
+  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 16px 28px;
+    border: none;
+    border-radius: 2px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s ease;
+    letter-spacing: 0.01em;
+  }
+  .btn-primary:hover { background: var(--accent); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--ink);
+    padding: 16px 28px;
+    border: 1px solid var(--ink);
+    border-radius: 2px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease;
+  }
+  .btn-secondary:hover { background: var(--ink); color: var(--paper); }
+
+  /* Proof row */
+  .proof {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    padding: 72px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .proof-item .proof-num {
+    font-family: var(--serif);
+    font-size: 52px;
+    font-weight: 400;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+  }
+  .proof-item .proof-label {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.45;
+    max-width: 240px;
+  }
+
+  /* Section headers */
+  section { padding: 110px 0; border-bottom: 1px solid var(--rule); }
+  .section-head { margin-bottom: 72px; max-width: 720px; }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  h2 em { font-style: italic; color: var(--accent); font-weight: 400; }
+  .section-lede {
+    font-size: 18px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  /* Services grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-left: 1px solid var(--rule);
+  }
+  .service-card {
+    padding: 44px 40px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: background 0.25s ease;
+    cursor: pointer;
+  }
+  .service-card:hover { background: var(--paper-warm); }
+  .service-num {
+    font-family: var(--serif);
+    font-size: 13px;
+    color: var(--ink-faint);
+    font-style: italic;
+  }
+  .service-title {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .service-desc {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+  .service-tag {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-top: 8px;
+  }
+
+  /* AI Troubleshoot widget */
+  .ai-section { background: var(--paper-warm); }
+  .ai-container {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .ai-widget {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+  }
+  .ai-header {
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ai-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .ai-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.15);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.15); }
+    50% { box-shadow: 0 0 0 6px rgba(74, 222, 128, 0.08); }
+  }
+  .ai-header-title {
+    font-family: var(--serif);
+    font-size: 17px;
+    color: var(--ink);
+  }
+  .ai-header-sub {
+    font-size: 12px;
+    color: var(--ink-mute);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .ai-messages {
+    padding: 28px 32px;
+    min-height: 280px;
+    max-height: 460px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .msg {
+    max-width: 82%;
+    padding: 14px 18px;
+    border-radius: 2px;
+    font-size: 15px;
+    line-height: 1.55;
+    animation: msgIn 0.3s ease;
+  }
+  @keyframes msgIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .msg-user {
+    background: var(--ink);
+    color: var(--paper);
+    align-self: flex-end;
+  }
+  .msg-ai {
+    background: var(--accent-soft);
+    color: var(--ink);
+    align-self: flex-start;
+    border-left: 2px solid var(--accent);
+  }
+  .msg-ai strong { font-weight: 500; color: var(--accent); }
+  .msg-system {
+    font-size: 13px;
+    color: var(--ink-mute);
+    font-style: italic;
+    text-align: center;
+    padding: 8px 0;
+  }
+  .ai-input-row {
+    display: flex;
+    border-top: 1px solid var(--rule);
+    background: var(--paper);
+  }
+  .ai-input {
+    flex: 1;
+    border: none;
+    padding: 20px 28px;
+    font-family: var(--sans);
+    font-size: 15px;
+    color: var(--ink);
+    outline: none;
+    background: transparent;
+  }
+  .ai-input::placeholder { color: var(--ink-faint); }
+  .ai-send {
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 0 32px;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background 0.2s;
+  }
+  .ai-send:hover { background: var(--accent); }
+  .ai-send:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  .ai-examples {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .ai-example {
+    background: transparent;
+    border: 1px solid var(--rule);
+    padding: 8px 14px;
+    border-radius: 2px;
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .ai-example:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .typing {
+    display: inline-flex;
+    gap: 3px;
+    align-items: center;
+  }
+  .typing span {
+    width: 5px;
+    height: 5px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: bounce 1.2s infinite;
+  }
+  .typing span:nth-child(2) { animation-delay: 0.15s; }
+  .typing span:nth-child(3) { animation-delay: 0.3s; }
+  @keyframes bounce {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-4px); opacity: 1; }
+  }
+
+  /* Request service form */
+  .request-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .request-copy h2 { margin-bottom: 24px; }
+  .request-copy p {
+    font-size: 17px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .request-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .request-list li {
+    font-size: 14px;
+    color: var(--ink-soft);
+    padding-left: 22px;
+    position: relative;
+  }
+  .request-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .form-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 40px;
+    border-radius: 2px;
+  }
+  .form-group { margin-bottom: 22px; }
+  .form-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+  }
+  .form-input, .form-select, .form-textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    font-family: var(--sans);
+    font-size: 15px;
+    color: var(--ink);
+    background: var(--paper);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-input:focus, .form-select:focus, .form-textarea:focus {
+    border-color: var(--accent);
+  }
+  .form-textarea { resize: vertical; min-height: 90px; }
+  .urgency-row { display: flex; gap: 8px; }
+  .urgency-option {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid var(--rule);
+    text-align: center;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    background: var(--paper);
+    border-radius: 2px;
+  }
+  .urgency-option:hover { border-color: var(--accent); }
+  .urgency-option.active {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+  .btn-full {
+    width: 100%;
+    padding: 16px;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    border-radius: 2px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-full:hover { background: var(--accent); }
+
+  .success-state {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .success-state .check {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .success-state h3 {
+    font-family: var(--serif);
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+  .success-state p {
+    color: var(--ink-soft);
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+  .sms-preview {
+    margin-top: 24px;
+    padding: 20px;
+    background: var(--paper-warm);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    text-align: left;
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .sms-preview-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 10px;
+    font-style: normal;
+  }
+
+  /* About */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 100px;
+    align-items: start;
+  }
+  .about-kicker {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .about-lede {
+    font-family: var(--serif);
+    font-size: 28px;
+    line-height: 1.35;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    margin-bottom: 32px;
+  }
+  .about-body p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 36px;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label {
+    font-size: 13px;
+    color: var(--ink-mute);
+    letter-spacing: 0.04em;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 80px 0 40px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+  .footer-brand {
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--paper);
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+  .footer-tag {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+    max-width: 320px;
+  }
+  .footer-col-title {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 18px;
+  }
+  .footer-col ul { list-style: none; padding: 0; }
+  .footer-col li { margin-bottom: 10px; }
+  .footer-col a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: #ffffff; }
+  .footer-bottom {
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+  }
+
+  /* Mobile */
+  @media (max-width: 860px) {
+    nav ul { gap: 18px; }
+    nav ul li:not(:last-child) { display: none; }
+    .hero { padding: 64px 0 80px; }
+    .proof { grid-template-columns: 1fr; gap: 32px; padding: 48px 0; }
+    section { padding: 72px 0; }
+    .services-grid { grid-template-columns: 1fr; }
+    .request-grid, .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    .ai-messages { padding: 20px; min-height: 240px; }
+    .ai-header { padding: 18px 20px; }
+    .ai-input { padding: 16px 20px; }
+    .ai-send { padding: 0 20px; }
+    .form-card { padding: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark"></span>
+        Manhattan Dental Equipment
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#troubleshoot">Troubleshoot</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#request" class="nav-cta">Request Service</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="border-bottom: 1px solid var(--rule);">
+  <div class="container">
+    <div class="eyebrow">Established 1985 · Serving Manhattan</div>
+    <h1>Dental equipment service<br/>that <em>actually</em> shows up.</h1>
+    <p class="hero-sub">
+      For forty years, Manhattan practices have called us when the chair won't recline,
+      the Statim is throwing errors, or a new operatory needs to be built out by Monday.
+      Same technician every visit. Fixed on the first call. Transparent pricing.
+    </p>
+    <div class="cta-row">
+      <a href="#request" class="btn-primary">Request Service →</a>
+      <a href="#troubleshoot" class="btn-secondary">Try the Troubleshoot Tool</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<div class="container">
+  <div class="proof">
+    <div class="proof-item">
+      <div class="proof-num">40+</div>
+      <div class="proof-label">Years serving NYC dental practices, second generation.</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-num">94%</div>
+      <div class="proof-label">First-visit fix rate. No second trips, no surprise invoices.</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-num">&lt;4h</div>
+      <div class="proof-label">Average response time for Manhattan emergency calls.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">What we do</div>
+      <h2>Service, installation, and equipment sales — <em>under one roof.</em></h2>
+      <p class="section-lede">
+        From a single handpiece repair to a full operatory build-out, we handle it ourselves.
+        No subcontractors, no call centers, no six-week wait for a Schein tech.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-title">Chair Repair &amp; Rebuilds</div>
+        <div class="service-desc">A-dec, Belmont, Pelton &amp; Crane, DentalEZ, Midmark. Hydraulics, upholstery, electrical, delivery units.</div>
+        <div class="service-tag">Most common call</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-title">Handpiece Repair</div>
+        <div class="service-desc">NSK, KaVo, Star, W&amp;H, Bien-Air. Turbine rebuilds, bearings, fiber optics. Same-day turnaround.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-title">Sterilizer &amp; Autoclave Service</div>
+        <div class="service-desc">Statim, Tuttnauer, Midmark M-series. Seal replacements, error diagnostics, compliance documentation.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-title">Compressors &amp; Vacuums</div>
+        <div class="service-desc">Air Techniques, Midmark, Dürr. Preventive maintenance, oil changes, full system rebuilds.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <div class="service-title">New Practice Build-Out</div>
+        <div class="service-desc">Opening a Manhattan office. Equipment selection, installation, plumbing coordination, startup.</div>
+        <div class="service-tag">Premium service</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <div class="service-title">Practice Relocation</div>
+        <div class="service-desc">Rent up, moving floors, consolidating. Decommission, transport, reinstall — one crew, one invoice.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">07</div>
+        <div class="service-title">Equipment Modernization</div>
+        <div class="service-desc">Your 1998 chairs still have ten years in them. We'll tell you what's worth rebuilding and what isn't.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">08</div>
+        <div class="service-title">Refurbished Equipment Sales</div>
+        <div class="service-desc">Certified refurbished chairs, sterilizers, and compressors at a fraction of new. Warrantied by us.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI TROUBLESHOOTING -->
+<section id="troubleshoot" class="ai-section">
+  <div class="container">
+    <div class="section-head" style="text-align: center; margin: 0 auto 60px; max-width: 640px;">
+      <div class="eyebrow">Before you call</div>
+      <h2>Describe what's happening. <em>We'll tell you if it's urgent.</em></h2>
+      <p class="section-lede">
+        Plain-English troubleshooting for busy office managers. If it's something you can fix in five
+        minutes, we'll tell you how. If it needs a technician, we'll route it straight to Mike.
+      </p>
+    </div>
+
+    <div class="ai-container">
+      <div class="ai-widget">
+        <div class="ai-header">
+          <div class="ai-header-left">
+            <div class="ai-status-dot"></div>
+            <div>
+              <div class="ai-header-title">Equipment Triage</div>
+              <div class="ai-header-sub">Powered by AI · Average response 8 seconds</div>
+            </div>
+          </div>
+        </div>
+        <div class="ai-messages" id="aiMessages">
+          <div class="msg msg-ai">
+            Hi — I'm the Manhattan Dental Equipment triage assistant. Tell me what's happening with your equipment. Include the <strong>make/model</strong> if you know it, and describe the symptoms. I'll suggest what to check and flag whether you need a technician today.
+          </div>
+        </div>
+        <div class="ai-input-row">
+          <input type="text" class="ai-input" id="aiInput" placeholder="e.g. My Statim 2000 is flashing error code 4 and won't build pressure..." />
+          <button class="ai-send" id="aiSend" onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+
+      <div class="ai-examples">
+        <button class="ai-example" onclick="useExample(this)">A-dec chair won't recline after power cycle</button>
+        <button class="ai-example" onclick="useExample(this)">Statim 2000 flashing error code 4</button>
+        <button class="ai-example" onclick="useExample(this)">NSK handpiece making a grinding sound</button>
+        <button class="ai-example" onclick="useExample(this)">Compressor running constantly, won't shut off</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REQUEST SERVICE -->
+<section id="request">
+  <div class="container">
+    <div class="request-grid">
+      <div class="request-copy">
+        <div class="eyebrow">Request service</div>
+        <h2>Fill this out and it goes <em>directly to Mike's phone.</em></h2>
+        <p>
+          No call center. No ticket queue. No "a technician will be in touch within
+          three to five business days." The form on the right formats your request as a
+          structured text message to Mike with everything he needs to call you back prepared.
+        </p>
+        <ul class="request-list">
+          <li>Emergency requests text Mike within 60 seconds</li>
+          <li>Scheduled service requests book same week</li>
+          <li>Every request gets a confirmation number you can reference</li>
+          <li>For existing clients: we already know your equipment history</li>
+        </ul>
+      </div>
+
+      <div class="form-card" id="formCard">
+        <form onsubmit="return submitRequest(event)">
+          <div class="form-group">
+            <label class="form-label">Practice Name</label>
+            <input type="text" class="form-input" id="practice" placeholder="e.g. Park Avenue Dental" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-input" id="contact" placeholder="Office Manager's name" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone</label>
+            <input type="tel" class="form-input" id="phone" placeholder="(212) 555-0100" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Equipment Affected</label>
+            <select class="form-select" id="equipment" required>
+              <option value="">Select equipment type…</option>
+              <option>Dental chair</option>
+              <option>Handpiece</option>
+              <option>Sterilizer / Autoclave</option>
+              <option>Compressor / Vacuum</option>
+              <option>X-ray / Imaging</option>
+              <option>New installation / build-out</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">What's happening?</label>
+            <textarea class="form-textarea" id="symptoms" placeholder="Briefly describe the issue. Model number if you know it." required></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Urgency</label>
+            <div class="urgency-row">
+              <div class="urgency-option" onclick="setUrgency(this, 'Today')">Today</div>
+              <div class="urgency-option active" onclick="setUrgency(this, 'This week')">This week</div>
+              <div class="urgency-option" onclick="setUrgency(this, 'Scheduled')">Scheduled</div>
+            </div>
+          </div>
+          <button type="submit" class="btn-full">Send to Mike →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="eyebrow">About</div>
+        <h2>Two generations. <em>One technician</em> per practice.</h2>
+      </div>
+      <div class="about-body">
+        <div class="about-kicker">The reason our clients stay.</div>
+        <p class="about-lede">
+          When you call Schein, you get a different technician every visit. They don't know your equipment,
+          your building's access quirks, or that the chair in Op 3 has been running on a retrofitted valve since 2017.
+        </p>
+        <p>
+          Manhattan Dental Equipment is a sister operation to Brooklyn Dental Equipment, the family business
+          our father started in 1985. Mike grew up in the shop, trained on every major manufacturer, and now
+          runs the Manhattan route himself — the same route, the same tech, year after year.
+        </p>
+        <p>
+          We're not trying to be the biggest. We're trying to be the one call that solves the problem the
+          first time, at half the price of a national supplier, with the documentation your compliance officer
+          actually needs.
+        </p>
+
+        <div class="about-stats">
+          <div>
+            <div class="stat-num">1985</div>
+            <div class="stat-label">Family business established</div>
+          </div>
+          <div>
+            <div class="stat-num">800+</div>
+            <div class="stat-label">Tri-state practices served</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Manhattan Dental Equipment</div>
+        <p class="footer-tag">
+          Service, installation, and equipment sales for Manhattan dental practices.
+          A family business, second generation, since 1985.
+        </p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <ul>
+          <li><a href="#services">Chair Repair</a></li>
+          <li><a href="#services">Handpieces</a></li>
+          <li><a href="#services">Sterilizers</a></li>
+          <li><a href="#services">Build-Outs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Company</div>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#troubleshoot">Troubleshoot</a></li>
+          <li><a href="#request">Request Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact</div>
+        <ul>
+          <li><a href="tel:+12125550100">(212) 555-0100</a></li>
+          <li><a href="mailto:mike@mde.nyc">mike@mde.nyc</a></li>
+          <li>Mon–Fri · 8a–6p</li>
+          <li>Emergency: 24/7</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Manhattan Dental Equipment. A Brooklyn Dental Equipment company.</div>
+      <div>Demo build · Not yet live</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---------- AI Troubleshoot widget ----------
+  const messagesEl = document.getElementById('aiMessages');
+  const inputEl = document.getElementById('aiInput');
+  const sendBtn = document.getElementById('aiSend');
+  let conversationHistory = [];
+
+  function addMessage(text, role) {
+    const div = document.createElement('div');
+    div.className = 'msg ' + (role === 'user' ? 'msg-user' : 'msg-ai');
+    div.innerHTML = text;
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+    return div;
+  }
+
+  function addTyping() {
+    const div = document.createElement('div');
+    div.className = 'msg msg-ai';
+    div.id = 'typingIndicator';
+    div.innerHTML = '<div class="typing"><span></span><span></span><span></span></div>';
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function removeTyping() {
+    const el = document.getElementById('typingIndicator');
+    if (el) el.remove();
+  }
+
+  // Scripted response library. Matches by keyword against the 4 preset examples
+  // plus generic fallbacks for common equipment categories. When the real Claude
+  // API is wired in via /api/troubleshoot, this whole function gets swapped out
+  // and the UX stays identical.
+  const scriptedResponses = [
+    {
+      match: ['statim', 'error 4', 'error code 4', 'autoclave error'],
+      reply: `A <strong>Statim 2000 error code 4</strong> is almost always a water reservoir or water-quality issue — it means the unit isn't getting enough distilled water to build pressure.<br/><br/>Before you call, check:<br/>• Is the reservoir full of <strong>distilled water only</strong> (not tap, not filtered)?<br/>• Is the water pickup tube in the reservoir seated properly?<br/>• Run one empty cycle with a fresh reservoir fill and see if the error clears.<br/><br/>If it still throws error 4 after that, the <strong>water pump or solenoid</strong> likely needs service. That's a same-day repair — not an emergency, but worth scheduling this week.<br/><br/>If those steps don't resolve it, use the Request Service form below and Mike will schedule a visit.`
+    },
+    {
+      match: ['a-dec', 'adec', 'chair', 'recline', "won't recline", 'wont recline'],
+      reply: `An <strong>A-dec chair that won't recline after a power cycle</strong> is usually one of three things, in order of likelihood:<br/><br/>• The <strong>foot control</strong> was bumped or unplugged — check the cable at the base of the chair.<br/>• The <strong>master switch</strong> under the chair's junction box tripped — there's a small reset button on most A-dec 500/511 models.<br/>• The <strong>hydraulic relay</strong> failed, which is a technician job.<br/><br/>Try the foot control and reset button first. If the chair still won't move, <strong>stop using it</strong> — forcing it can damage the hydraulics.<br/><br/>This sounds like something Mike should see today — call <strong>(212) 555-0100</strong> or use the Request Service form.`
+    },
+    {
+      match: ['nsk', 'handpiece', 'grinding', 'grinding sound', 'grinding noise'],
+      reply: `<strong>Grinding noise in an NSK handpiece</strong> almost always means the turbine bearings are worn or contaminated. This doesn't usually happen suddenly — it builds over 6–12 months of use.<br/><br/>Before you call:<br/>• <strong>Stop using the handpiece immediately</strong> — running it with bad bearings can damage the impeller and turn a $150 repair into a $400 one.<br/>• Pull it off the line and set it aside.<br/>• Do NOT try to lubricate it more — that won't help a worn bearing.<br/><br/>A turbine rebuild is a routine repair with same-day turnaround. We service NSK, KaVo, Star, and W&amp;H in-house.<br/><br/>Use the Request Service form below and we'll schedule a pickup or swap.`
+    },
+    {
+      match: ['compressor', 'running constantly', "won't shut off", 'wont shut off', 'vacuum'],
+      reply: `A <strong>compressor that runs constantly and won't shut off</strong> is usually a pressure switch, a leak in the system, or a failing check valve. The unit is working harder than it should and this will shorten its life fast.<br/><br/>Quick checks:<br/>• Listen for <strong>audible air leaks</strong> at fittings and the drain valve.<br/>• Check the <strong>pressure gauge</strong> — is it reaching cutout pressure (usually 100–120 PSI) or stalling below it?<br/>• Is the <strong>tank drain</strong> closed fully?<br/><br/>If you can hear a leak or the gauge won't climb past 80 PSI, this needs a technician soon — running it like this can burn out the motor within weeks.<br/><br/>This sounds like something Mike should see today — call <strong>(212) 555-0100</strong> or use the Request Service form.`
+    }
+  ];
+
+  const genericFallbacks = {
+    chair: `That sounds like a <strong>chair-related issue</strong>. Before you call, note the <strong>make and model</strong> (A-dec, Belmont, Pelton &amp; Crane, etc.), whether the issue is with reclining, the delivery unit, the light, or the foot control, and whether it started suddenly or gradually.<br/><br/>Most chair issues are same-week repairs, not emergencies — unless the chair is stuck in a position that prevents you from seeing patients.<br/><br/>Use the Request Service form below with those details and Mike will call back prepared.`,
+    sterilizer: `That sounds like a <strong>sterilizer/autoclave issue</strong>. These are often urgent because they affect your ability to run operatories.<br/><br/>Before you call: note the <strong>make, model, and any error code displayed</strong>, and confirm you're using <strong>distilled water only</strong>. Most sterilizer errors are water-quality, seal, or sensor issues — all of which are same-day repairs.<br/><br/>This sounds like something Mike should look at today — call <strong>(212) 555-0100</strong> or use the Request Service form below.`,
+    handpiece: `<strong>Handpiece issues</strong> are our most common repair. Note the <strong>brand and model</strong> (NSK, KaVo, Star, W&amp;H, Bien-Air), whether it's a high-speed or low-speed, and what the symptom is — grinding, no water, no spray, won't spin, fiber optic out.<br/><br/>Most handpiece repairs are <strong>same-day turnaround</strong>. Use the Request Service form below and we'll coordinate a pickup or swap.`,
+    install: `For <strong>new installs, build-outs, or relocations</strong>, Mike handles these personally from planning through startup. These aren't emergency calls — they're consultations.<br/><br/>Use the Request Service form below with a few details about your timeline and what you're planning, and Mike will schedule a walkthrough (in-person or virtual) to scope the project.`,
+    generic: `Thanks for the detail. For Mike to triage this properly, he'll want to know: the <strong>make and model</strong> of the equipment, <strong>any error codes or lights</strong>, whether the issue is sudden or gradual, and how <strong>urgently</strong> you need it resolved.<br/><br/>Use the Request Service form below with those details and Mike will call back with a plan.`
+  };
+
+  function matchResponse(text) {
+    const lower = text.toLowerCase();
+    // Try specific scripted matches first
+    for (const r of scriptedResponses) {
+      if (r.match.some(keyword => lower.includes(keyword))) {
+        return r.reply;
+      }
+    }
+    // Fall back to category-based responses
+    if (/chair|recline|delivery|operatory/i.test(lower)) return genericFallbacks.chair;
+    if (/steril|autoclave|statim|tuttnauer|midmark m/i.test(lower)) return genericFallbacks.sterilizer;
+    if (/handpiece|turbine|high.?speed|low.?speed|drill/i.test(lower)) return genericFallbacks.handpiece;
+    if (/install|build.?out|new practice|relocat|moving/i.test(lower)) return genericFallbacks.install;
+    return genericFallbacks.generic;
+  }
+
+  async function sendMessage() {
+    const text = inputEl.value.trim();
+    if (!text) return;
+
+    addMessage(text, 'user');
+    inputEl.value = '';
+    sendBtn.disabled = true;
+    addTyping();
+
+    conversationHistory.push({ role: 'user', content: text });
+
+    // Realistic "thinking" delay (1.5–2.5s) so it feels like a real AI response
+    const delay = 1500 + Math.random() * 1000;
+    await new Promise(resolve => setTimeout(resolve, delay));
+
+    removeTyping();
+    const reply = matchResponse(text);
+    addMessage(reply, 'ai');
+    conversationHistory.push({ role: 'assistant', content: reply });
+
+    sendBtn.disabled = false;
+    inputEl.focus();
+  }
+
+  inputEl.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+
+  function useExample(el) {
+    inputEl.value = el.textContent.trim();
+    sendMessage();
+  }
+
+  // ---------- Request Service form ----------
+  let selectedUrgency = 'This week';
+
+  function setUrgency(el, value) {
+    document.querySelectorAll('.urgency-option').forEach(o => o.classList.remove('active'));
+    el.classList.add('active');
+    selectedUrgency = value;
+  }
+
+  function submitRequest(e) {
+    e.preventDefault();
+    const practice = document.getElementById('practice').value;
+    const contact = document.getElementById('contact').value;
+    const phone = document.getElementById('phone').value;
+    const equipment = document.getElementById('equipment').value;
+    const symptoms = document.getElementById('symptoms').value;
+
+    const confirmationId = 'MDE-' + Math.floor(Math.random() * 90000 + 10000);
+    const smsText = `NEW SERVICE REQUEST ${confirmationId}\n\nPractice: ${practice}\nContact: ${contact}\nPhone: ${phone}\nEquipment: ${equipment}\nUrgency: ${selectedUrgency}\nIssue: ${symptoms}\n\nReply to this message or call ${phone} to respond.`;
+
+    document.getElementById('formCard').innerHTML = `
+      <div class="success-state">
+        <div class="check">✓</div>
+        <h3>Request sent to Mike.</h3>
+        <p>Confirmation <strong>${confirmationId}</strong></p>
+        <p style="color: var(--ink-mute); font-size: 13px; margin-top: 8px;">
+          ${selectedUrgency === 'Today' ? "Mike will call within the hour." : "Mike will reach out within one business day."}
+        </p>
+        <div class="sms-preview">
+          <div class="sms-preview-label">Text message sent to Mike:</div>
+          ${smsText.replace(/\n/g, '<br/>')}
+        </div>
+      </div>
+    `;
+    return false;
+  }
+</script>
+
+</body>
+</html>
